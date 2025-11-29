@@ -189,4 +189,4 @@ Here comes the fun part — turning your refresh-token logic into a **visual map
 
  a **clear, step-by-step conceptual diagram** of **access + refresh rotation flow**, exactly matching how implementation works.
 
-No fancy jargon — just the real logic => - [Token Flow Diagram](docs/token-flow.md)
+No fancy jargon — just the real logic => - [Token Flow Diagram](token-flow.md)
