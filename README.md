@@ -99,7 +99,7 @@ Jwt-RefreshToken-Implementation/
 │   ├── Helpers/
 │   │   └── ClientIpProvider.cs
 │   │
-│   ├── Infrastructure DI Setup/
+│   ├── Infrastructure/
 │   ├── InfraStructureServiceExtentions.cs
 │   └── Readme.md
 │
@@ -137,6 +137,19 @@ see the short story inside:
 
 ---
 
+📘 Future Improvements (Optional)
+
+Add UserAgent tracking
+
+Add full revoke-all-sessions endpoint
+
+Add tests (unit + integration)
+
+Add role-based authorization examples
+
+Add Docker support
+
+---
 #  **Security Best Practices Implemented**
 
 ✔ Hashing refresh tokens using SHA-256
