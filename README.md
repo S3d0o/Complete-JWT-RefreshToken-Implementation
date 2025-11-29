@@ -1,2 +1,4 @@
 # Complete JWT + Refresh Token System for .NET
-This repository contains a full implementation of JWT Access Tokens, Refresh Tokens, Rotation, Revocation, and secure authentication.
+“This repository focuses on providing a complete JWT + Refresh Token system.
+The project structure here is only an example; you can place the interfaces,
+services, helpers, and controllers into your own architecture (Clean, Onion, MVC, etc.).”
