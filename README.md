@@ -137,6 +137,95 @@ see the short story inside:
 
 ---
 
+# 📦 Installation & Setup
+
+### 1️⃣ Clone the repo
+
+```bash
+git clone https://github.com/your-username/Complete-JWT-RefreshToken-Implementation.git
+cd Complete-JWT-RefreshToken-Implementation
+```
+
+### 2️⃣ Update appsettings.json
+
+Add your JWT keys:
+
+```json
+"JwtSettings": {
+  "Key": "SUPER_SECRET_KEY_HERE",
+  "Issuer": "YourApi",
+  "Audience": "YourApiUsers",
+  "AccessTokenExpirationMinutes": 15,
+  "RefreshTokenExpirationDays": 30
+}
+```
+
+### 3️⃣ Apply migrations
+
+```bash
+dotnet ef database update
+```
+
+### 4️⃣ Run the API
+
+```bash
+dotnet run
+```
+
+---
+
+# 📬 API Endpoints
+
+| Method | Endpoint                  | Description                  |
+| ------ | ------------------------- | ---------------------------- |
+| POST   | `/api/auth/login`         | Generate JWT + Refresh Token |
+| POST   | `/api/auth/refresh-token` | Rotate & issue new tokens    |
+
+---
+
+# 📝 Sample Login Request
+
+```json
+{
+  "email": "user@example.com",
+  "password": "P@ssw0rd123"
+}
+```
+
+### Response
+
+```json
+{
+  "accessToken": "xxxxx.yyyyy.zzzzz",
+  "refreshToken": "string-token",
+  "expiresAt": "2025-01-01T00:00:00Z"
+}
+```
+
+---
+
+# 🔄 Refresh Token Request
+
+```json
+{
+  "refreshToken": "your-refresh-token",
+  "ipAddress": "192.168.1.25"
+}
+```
+
+---
+
+# ✔️ Best Practices Implemented
+
+* Hashing refresh tokens with SHA-256
+* Rotating refresh tokens on every use
+* Using IP binding to prevent token theft
+* Encapsulating token logic in a dedicated TokenService
+* Repository pattern for database operations
+* Preventing leaking of token details
+
+---
+
 📘 Future Improvements (Optional)
 
 Add UserAgent tracking
